@@ -1,0 +1,157 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;   /* roof basicamente está armazenando cores de forma intuitiva, explicando onde cada cor atua */
+    --botao-azul: #167BF7;  
+    --cor-de-fundo: #00030C; 
+    --fonte-principal: 'inter';   /*a fonte q foi pega do google.fontes */
+    --botao-azul-efeito: #3c92fa;
+}
+
+body {
+    background-color: var(--cor-de-fundo); /* o var chamou a cor que está armazenada no root, logo acima. */
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+* {
+    margin: 0;      /* nessa parte tudo foi selecionado com o * e os espaçamentos automaticos do navegador foram tirados */
+    padding: 0;
+}
+
+.principal {
+    background-image: url(img/Background.png); /* para colocar uma imagem como o background da pagina */
+    background-repeat: no-repeat;  /* para a imagem do backgorund n repetir */
+    background-size: contain;  /* preenche toda a pagina */
+    align-items: center; /* quando está no grid alinha verticalmente, nao horizontalmente. No centro da coluna */
+    text-align: center; /* alinhou tudo o conteudo no centro deixando tudo bonito */
+}
+
+.container {
+    height: 105vh;   /* é basicamente a altura da tela do dispositivo, 100 vh = 100% de tela */
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;           /* em é o espaço com base no tamanho da fonte, se a fonte for 16px o padding 1em sera 16px. */
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none;  /* retira o sublinhado q estava nos textos dos botoes */
+    margin-bottom: 1em;     /* margin botton é margem de baixo */
+}
+
+
+.botao_secundario {
+    background-color: transparent;
+    color: var(--branco-principal);
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso {
+    color: var(--cinza-secundario);
+    font-size: 12px;
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0em; /* cima, direita, baixo, esquerda */
+}
+
+.container__caixa {
+    margin: 0 6em;  /* 0 = em cima e embaixo, 6 = esquerda e direita */
+}
+
+.secundario__imagem {
+    width: 80%; /* vai ocupar 80% da coluna dele */
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    display: inline-block; /* só ocupa o espaço dele dentro do botao, só até onde tem coisa escrita. */
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 1.5em;
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none; /* retirou os pontos que a UL e LI colocam por padrao nos elementos */
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 2em;
+}
+
+.lista__link a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.rodape__texto {
+    margin: 2em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+.rodape {
+    text-align: center;
+    margin: 10em 3em;
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul);
+}
+
+.lista__link a:active {
+    color: rgb(231, 33, 33);
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color: #00030C;
+}
